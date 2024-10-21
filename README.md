@@ -3,6 +3,8 @@
 This Angular repository implements a clean architecture using a store-agnostic and API-agnostic approach.
 The architecture ensures adherence to SOLID and DRY principles, allowing for seamless integration with different backend APIs and store solutions without tightly coupling the code to specific implementations. Ideal for scalable and maintainable frontend applications.
 
+![](https://app.eraser.io/workspace/RMsdAUYBdgSzRHBILet8/preview?elements=o1mc2PLg6hMHA4um2yIqrQ&type=embed)
+
 ## Live demo
 
 https://userrhub.pages.dev
