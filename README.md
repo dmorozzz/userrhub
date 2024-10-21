@@ -1,4 +1,13 @@
-# Userhub
+# Userhub Example App
+
+This Angular repository implements a clean architecture using a store-agnostic and API-agnostic approach.
+The architecture ensures adherence to SOLID and DRY principles, allowing for seamless integration with different backend APIs and store solutions without tightly coupling the code to specific implementations. Ideal for scalable and maintainable frontend applications.
+
+## Live demo
+
+https://userrhub.pages.dev
+
+## Angular CLI
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3.
 
