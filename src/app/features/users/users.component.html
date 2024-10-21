@@ -1,0 +1,37 @@
+<mat-drawer-container class="container" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side" position="end">
+    @if (selectedUser$ | async; as user) {
+    <div class="user-details">
+      <button (click)="clearSeletedUser()" mat-icon-button class="close-btn" aria-label="Close button">
+        <mat-icon>close</mat-icon>
+      </button>
+      <app-user-info [user]="user"></app-user-info>
+      <section class="posts-list">
+        <span class="user-posts-title">User posts:</span>
+        @if (user.posts) {
+        @if (user.posts.length > 0) {
+        <app-posts-list [posts]="user.posts"></app-posts-list>
+        } @else {
+        <span>There are no posts</span>
+        }
+        } @else {
+        <span>Loading...</span>
+        }
+      </section>
+
+      <app-user-controller class="user-controller" [user]="user" (update)="updateUser($event)"
+        (delete)="deleteUser($event)"></app-user-controller>
+    </div>
+    }
+  </mat-drawer>
+
+  @if (users$ | async; as users) {
+  @if (users.length > 0) {
+  <app-users-list [users]="users" (select)="selectUser($event)"></app-users-list>
+  } @else {
+  <div class="not-users">
+    <p>There are no users.</p>
+  </div>
+  }
+  }
+</mat-drawer-container>

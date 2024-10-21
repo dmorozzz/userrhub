@@ -1,0 +1,13 @@
+td {
+  text-wrap: nowrap;
+}
+
+.users-list {
+  max-width: 100%;
+  overflow: auto;
+}
+
+td.mat-column-actions {
+  width: 100px;
+  padding-right: 8px;
+}

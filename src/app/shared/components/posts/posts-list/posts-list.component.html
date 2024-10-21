@@ -1,0 +1,10 @@
+<mat-accordion>
+  @for (post of posts; track post.id) {
+  <mat-expansion-panel>
+    <mat-expansion-panel-header [collapsedHeight]="'auto'" [expandedHeight]="'auto'">
+      <mat-panel-title>{{ post.title }}</mat-panel-title>
+    </mat-expansion-panel-header>
+    <p>{{ post.body }}</p>
+  </mat-expansion-panel>
+  }
+</mat-accordion>
